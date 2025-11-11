@@ -1,0 +1,307 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|d:\\huflit\\csdl_pt\\testiis\\testiis\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\sanpham\\cau2_2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\sanpham\\cau2_2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\sanpham\\cau2_3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\sanpham\\cau2_3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\sanpham\\cau2_1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\sanpham\\cau2_1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\controllers\\chitietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\chitietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\models\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\models\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\hoadon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\hoadon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\chitiet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\chitiet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\khohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\khohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\controllers\\khohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\khohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\khachhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\khachhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|D:\\HUFLIT\\CSDL_PT\\TestIIS\\testiis\\views\\home\\test.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBB7742E-4A08-42EC-8ED4-8A74C3359144}|TestIIS\\TestIIS.csproj|solutionrelative:testiis\\views\\home\\test.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 316,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cau2_1.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_1.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\sanpham\\Cau2_1.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_1.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\sanpham\\Cau2_1.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T14:51:57.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sanphamController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\sanphamController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\sanphamController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\sanphamController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\sanphamController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:52:47.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cau2_2.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_2.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\sanpham\\Cau2_2.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_2.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\sanpham\\Cau2_2.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T04:32:24.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cau2_3.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_3.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\sanpham\\Cau2_3.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Cau2_3.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\sanpham\\Cau2_3.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T04:37:53.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "hoadonController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\hoadonController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\hoadonController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\hoadonController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\hoadonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:55:05.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:56:29.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataModel.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Models\\DataModel.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Models\\DataModel.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Models\\DataModel.cs",
+              "RelativeToolTip": "TestIIS\\Models\\DataModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:49:30.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\hoadon\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\hoadon\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\hoadon\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\hoadon\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T16:59:55.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\sanpham\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\sanpham\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\sanpham\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T17:00:17.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "chitietController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\chitietController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\chitietController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\chitietController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\chitietController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:55:15.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "khohangController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\khohangController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\khohangController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\khohangController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\khohangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:54:46.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\chitiet\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\chitiet\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\chitiet\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\chitiet\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T16:59:48.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\khachhang\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\khachhang\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\khachhang\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\khachhang\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T17:00:02.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\khohang\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\khohang\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\khohang\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\khohang\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T17:00:10.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "khachhangController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\khachhangController.cs",
+              "RelativeDocumentMoniker": "TestIIS\\Controllers\\khachhangController.cs",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Controllers\\khachhangController.cs",
+              "RelativeToolTip": "TestIIS\\Controllers\\khachhangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:54:34.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Test.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\Home\\Test.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\Home\\Test.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\Home\\Test.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\Home\\Test.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T14:37:30.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestIIS\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\CSDL_PT\\TestIIS\\TestIIS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TestIIS\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T14:30:49.368Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 316,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
