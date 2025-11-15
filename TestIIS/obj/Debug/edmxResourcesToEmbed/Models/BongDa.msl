@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BongDaModelStoreContainer" CdmEntityContainer="BongDaEntities">
+    <EntitySetMapping Name="CauThus">
+      <EntityTypeMapping TypeName="BongDaModel.CauThu">
+        <MappingFragment StoreEntitySet="CauThu">
+          <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaDB" ColumnName="MaDB" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiBongs">
+      <EntityTypeMapping TypeName="BongDaModel.DoiBong">
+        <MappingFragment StoreEntitySet="DoiBong">
+          <ScalarProperty Name="MaDB" ColumnName="MaDB" />
+          <ScalarProperty Name="TenDB" ColumnName="TenDB" />
+          <ScalarProperty Name="CLB" ColumnName="CLB" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThamGias">
+      <EntityTypeMapping TypeName="BongDaModel.ThamGia">
+        <MappingFragment StoreEntitySet="ThamGia">
+          <ScalarProperty Name="MaTD" ColumnName="MaTD" />
+          <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+          <ScalarProperty Name="SoTrai" ColumnName="SoTrai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TranDaus">
+      <EntityTypeMapping TypeName="BongDaModel.TranDau">
+        <MappingFragment StoreEntitySet="TranDau">
+          <ScalarProperty Name="MaTD" ColumnName="MaTD" />
+          <ScalarProperty Name="MaDB1" ColumnName="MaDB1" />
+          <ScalarProperty Name="MaDB2" ColumnName="MaDB2" />
+          <ScalarProperty Name="TrongTai" ColumnName="TrongTai" />
+          <ScalarProperty Name="SanDau" ColumnName="SanDau" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

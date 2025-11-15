@@ -1,0 +1,32 @@
+﻿@model TestIIS.Models.DoiBong
+@{
+    ViewBag.Title = "Thêm đội bóng";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Mã đội bóng:</label>
+    <br />
+    @Html.TextBoxFor(m => m.MaDB)
+    <br />
+    <br />
+
+    <label>Tên đội bóng:</label>
+    <br />
+    @Html.TextBoxFor(m => m.TenDB)
+    <br />
+    <br />
+
+    <label>CLB:</label>
+    <br />
+    @Html.TextBoxFor(m => m.CLB)
+    <br />
+    <br />
+
+   
+
+    <input type="submit" value="Thêm mới" />
+    @Html.ActionLink("Quay lại", "Index")
+}

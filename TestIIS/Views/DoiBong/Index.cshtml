@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TestIIS.Models.DoiBong>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Danh sách Đội bóng";
+    ViewBag.ActiveMenu = "DoiBong";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+@if (TempData["msg"] != null)
+{
+    <div style="color: green;">@TempData["msg"]</div>
+}
+
+<table class="table table-bordered table-striped text-center">
+    <thead>
+        <tr>
+            <th>Mã đội bóng</th>
+            <th>Tên đội bóng</th>
+            <th>CLB</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaDB</td>
+                    <td>@item.TenDB</td>
+                    <td>@item.CLB</td>
+
+                    <td>
+
+                        <a href="@Url.Action("Edit", "DoiBong", new { id = item.MaDB })" class="btn btn-sm btn-warning">Sửa</a>
+                        <a href="@Url.Action("Delete", "DoiBong", new {  id = item.MaDB })" class="btn btn-sm btn-danger"
+                           onclick="return confirm('Bạn có chắc chắn muốn xóa Đội bóng này?')">Xóa</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="4">Không có dữ liệu.</td></tr>
+        }
+    </tbody>
+
+</table>
+<a href="@Url.Action( "ToanCuc", "DoiBong")" class="btn btn-success">Xem dữ liệu toàn cục</a>
+<a href="@Url.Action("Create", "DoiBong")" class="btn btn-success">Thêm cầu thủ mới</a>

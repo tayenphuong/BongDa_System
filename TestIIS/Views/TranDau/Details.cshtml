@@ -1,0 +1,38 @@
+﻿@using System.Collections
+@model ArrayList
+@{
+    ViewBag.Title = "Chi tiết trận đấu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var td = Model as ArrayList;
+}
+
+<h2 class="text-primary">📋 Chi tiết trận đấu</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Mã trận</th>
+        <td>@td[0]</td>
+    </tr>
+    <tr>
+        <th>Đội 1</th>
+        <td>@td[1]</td>
+    </tr>
+    <tr>
+        <th>Đội 2</th>
+        <td>@td[2]</td>
+    </tr>
+    <tr>
+        <th>Trọng tài</th>
+        <td>@td[3]</td>
+    </tr>
+    <tr>
+        <th>Sân đấu</th>
+        <td>@td[4]</td>
+    </tr>
+</table>
+
+<a href="/TranDau/Index" class="btn btn-secondary">
+    ⬅ Quay lại
+</a>
+
+

@@ -1,0 +1,28 @@
+﻿@model TestIIS.Models.DoiBong
+@{
+    ViewBag.Title = "Cập nhật đội bóng";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.MaDB)
+
+    <label>Tên đội bóng:</label>
+    <br />
+    @Html.TextBoxFor(m => m.TenDB)
+    <br />
+    <br />
+
+    <label>CLB:</label>
+    <br />
+    @Html.TextBoxFor(m => m.CLB)
+    <br />
+    <br />
+
+    
+
+    <input type="submit" value="Lưu thay đổi" />
+    @Html.ActionLink("Quay lại", "Index")
+}

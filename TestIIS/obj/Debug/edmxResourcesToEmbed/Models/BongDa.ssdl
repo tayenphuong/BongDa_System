@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BongDaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CauThu">
+    <Key>
+      <PropertyRef Name="MaCT" />
+    </Key>
+    <Property Name="MaCT" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaDB" Type="char" MaxLength="4" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoiBong">
+    <Key>
+      <PropertyRef Name="MaDB" />
+    </Key>
+    <Property Name="MaDB" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="TenDB" Type="nvarchar" MaxLength="50" />
+    <Property Name="CLB" Type="nvarchar" MaxLength="10" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThamGia">
+    <Key>
+      <PropertyRef Name="MaTD" />
+      <PropertyRef Name="MaCT" />
+    </Key>
+    <Property Name="MaTD" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="MaCT" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="SoTrai" Type="int" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TranDau">
+    <Key>
+      <PropertyRef Name="MaTD" />
+    </Key>
+    <Property Name="MaTD" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="MaDB1" Type="char" MaxLength="4" />
+    <Property Name="MaDB2" Type="char" MaxLength="4" />
+    <Property Name="TrongTai" Type="nvarchar" MaxLength="50" />
+    <Property Name="SanDau" Type="nvarchar" MaxLength="10" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CauThu__MaDB__398D8EEE">
+    <End Role="DoiBong" Type="Self.DoiBong" Multiplicity="0..1" />
+    <End Role="CauThu" Type="Self.CauThu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoiBong">
+        <PropertyRef Name="MaDB" />
+      </Principal>
+      <Dependent Role="CauThu">
+        <PropertyRef Name="MaDB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThamGia__MaCT__412EB0B6">
+    <End Role="CauThu" Type="Self.CauThu" Multiplicity="1" />
+    <End Role="ThamGia" Type="Self.ThamGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CauThu">
+        <PropertyRef Name="MaCT" />
+      </Principal>
+      <Dependent Role="ThamGia">
+        <PropertyRef Name="MaCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThamGia__MaTD__403A8C7D">
+    <End Role="TranDau" Type="Self.TranDau" Multiplicity="1" />
+    <End Role="ThamGia" Type="Self.ThamGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TranDau">
+        <PropertyRef Name="MaTD" />
+      </Principal>
+      <Dependent Role="ThamGia">
+        <PropertyRef Name="MaTD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TranDau__MaDB1__3C69FB99">
+    <End Role="DoiBong" Type="Self.DoiBong" Multiplicity="0..1" />
+    <End Role="TranDau" Type="Self.TranDau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoiBong">
+        <PropertyRef Name="MaDB" />
+      </Principal>
+      <Dependent Role="TranDau">
+        <PropertyRef Name="MaDB1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TranDau__MaDB2__3D5E1FD2">
+    <End Role="DoiBong" Type="Self.DoiBong" Multiplicity="0..1" />
+    <End Role="TranDau" Type="Self.TranDau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoiBong">
+        <PropertyRef Name="MaDB" />
+      </Principal>
+      <Dependent Role="TranDau">
+        <PropertyRef Name="MaDB2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BongDaModelStoreContainer">
+    <EntitySet Name="CauThu" EntityType="Self.CauThu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoiBong" EntityType="Self.DoiBong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThamGia" EntityType="Self.ThamGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TranDau" EntityType="Self.TranDau" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CauThu__MaDB__398D8EEE" Association="Self.FK__CauThu__MaDB__398D8EEE">
+      <End Role="DoiBong" EntitySet="DoiBong" />
+      <End Role="CauThu" EntitySet="CauThu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThamGia__MaCT__412EB0B6" Association="Self.FK__ThamGia__MaCT__412EB0B6">
+      <End Role="CauThu" EntitySet="CauThu" />
+      <End Role="ThamGia" EntitySet="ThamGia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThamGia__MaTD__403A8C7D" Association="Self.FK__ThamGia__MaTD__403A8C7D">
+      <End Role="TranDau" EntitySet="TranDau" />
+      <End Role="ThamGia" EntitySet="ThamGia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TranDau__MaDB1__3C69FB99" Association="Self.FK__TranDau__MaDB1__3C69FB99">
+      <End Role="DoiBong" EntitySet="DoiBong" />
+      <End Role="TranDau" EntitySet="TranDau" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TranDau__MaDB2__3D5E1FD2" Association="Self.FK__TranDau__MaDB2__3D5E1FD2">
+      <End Role="DoiBong" EntitySet="DoiBong" />
+      <End Role="TranDau" EntitySet="TranDau" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

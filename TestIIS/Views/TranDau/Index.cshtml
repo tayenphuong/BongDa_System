@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Danh sách trận đấu";
+    var data = Model as System.Collections.ArrayList;
+    bool isMain = false;
+
+    // kiểm tra quyền tạo trận (nếu controller gửi ViewBag.IsMainServer)
+    if (ViewBag.IsMainServer != null)
+    {
+        isMain = (bool)ViewBag.IsMainServer;
+    }
+}
+
+<h2 class="mb-3">Danh sách trận đấu</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">@TempData["msg"]</div>
+}
+
+<div class="mb-3">
+    @if (isMain)
+    {
+        <a href="@Url.Action("Create", "TranDau")" class="btn btn-primary">
+            + Tạo trận đấu
+        </a>
+    }
+    else
+    {
+        <button class="btn btn-secondary" disabled>
+            + Tạo trận (Chỉ server toàn cục)
+        </button>
+    }
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã trận</th>
+            <th>Đội 1</th>
+            <th>Đội 2</th>
+            <th>Trọng tài</th>
+            <th>Sân đấu</th>
+            <th style="width: 200px;">Thao tác</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (data == null || data.Count == 0)
+        {
+            <tr>
+                <td colspan="6" class="text-center text-muted">
+                    Không có trận đấu nào.
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (System.Collections.ArrayList row in data)
+            {
+                <tr>
+                    <td>@row[0]</td>
+                    <td>@row[1]</td>
+                    <td>@row[2]</td>
+                    <td>@row[3]</td>
+                    <td>@row[4]</td>
+                    <td>
+                        <a href="@Url.Action("Details", "TranDau", new { id = row[0] })" class="btn btn-info btn-sm">Xem</a>
+                        @if (isMain)
+                        {
+                            <a href="@Url.Action("Edit", "TranDau", new { id = row[0] })" class="btn btn-warning btn-sm">Sửa</a>
+                            <a href="@Url.Action("Delete", "TranDau", new { id = row[0] })"
+                               onclick="return confirm('Bạn chắc chắn muốn xóa?')"
+                               class="btn btn-danger btn-sm">Xóa</a>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>

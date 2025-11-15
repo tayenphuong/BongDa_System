@@ -1,0 +1,64 @@
+﻿
+@using System.Collections
+@model ArrayList
+@{
+    ViewBag.Title = "Chỉnh sửa trận đấu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var td = Model as ArrayList;
+}
+
+
+<h2 class="text-warning">✏ Cập nhật trận đấu</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form method="post">
+    <input type="hidden" name="MaTD" value="@td[0]" />
+
+    <div class="form-group">
+        <label>Mã trận</label>
+        <input class="form-control" value="@td[0]" disabled />
+    </div>
+
+    <div class="form-group">
+        <label>Đội 1</label>
+        <select name="MaDB1" class="form-control" required>
+            @foreach (var db in ViewBag.ListDB)
+            {
+                <option value="@db.MaDB" @(db.MaDB == td[1].ToString() ? "selected" : "")>
+                    @db.TenDB
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Đội 2</label>
+        <select name="MaDB2" class="form-control" required>
+            @foreach (var db in ViewBag.ListDB)
+            {
+                <option value="@db.MaDB" @(db.MaDB == td[2].ToString() ? "selected" : "")>
+                    @db.TenDB
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Trọng tài</label>
+        <input type="text" name="TrongTai" value="@td[3]" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Sân đấu</label>
+        <input type="text" name="SanDau" value="@td[4]" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary">💾 Lưu thay đổi</button>
+    <a href="/TranDau/Index" class="btn btn-secondary">⬅ Hủy</a>
+</form>
+
+

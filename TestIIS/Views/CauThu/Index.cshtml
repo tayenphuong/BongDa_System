@@ -1,0 +1,103 @@
+﻿@using System.Collections
+@model ArrayList
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Danh sách cầu thủ";
+    ViewBag.ActiveMenu = "CauThu";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Danh sách cầu thủ</h3>
+    <a href="/CauThu/Create" class="btn btn-success">
+        <i class="bi bi-person-plus"></i> Thêm cầu thủ
+    </a>
+</div>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-info">@TempData["msg"]</div>
+}
+
+<form class="mb-3" method="get" action="/CauThu/Index">
+    <div class="input-group">
+        <input type="text" name="keyword" value="@Request["keyword"]" class="form-control" placeholder="Tìm mã, tên hoặc mã đội bóng..." />
+        <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Tìm</button>
+        @* Nút luân chuyển giữa Toàn cục và SV gốc *@
+        @if (ViewBag.IsSV1 == false)   // ❗ SV1 không được xem toàn cục
+        {
+            if (ViewBag.IsToanCuc == true)
+            {
+                <a href="/CauThu/Index" class="btn btn-secondary">
+                    🔙 Mảnh @ViewBag.SelectedServer
+                </a>
+            }
+            else
+            {
+                <a href="/CauThu/ToanCuc" class="btn btn-secondary">
+                    🌍 Toàn cục
+                </a>
+            }
+        }
+    </div>
+</form>
+
+<table class="table table-bordered table-striped align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã cầu thủ</th>
+            <th>Họ tên</th>
+            <th>Mã đội bóng</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count == 0)
+        {
+            <tr><td colspan="4" class="text-center">Không có dữ liệu</td></tr>
+        }
+        else
+        {
+            foreach (ArrayList row in Model)
+            {
+                <tr>
+                    <td>@row[0]</td>
+                    <td>@row[1]</td>
+                    <td>@row[2]</td>
+                    <td>
+                        @{
+                            string serverNguon = row[3].ToString();       // server chứa cầu thủ
+                            string svHienTai = ViewBag.SelectedServer;    // server người dùng đang đứng
+                            bool isOwner = (serverNguon == svHienTai);
+                        }
+
+                        @* Nút chuyển *@
+                        @* ❌ SV1 không có chuyển *@
+                        @if (!ViewBag.IsSV1 && isOwner)
+                        {
+                            <a href="/CauThu/ChuyenCauThu?maCT=@row[0]" class="btn btn-warning btn-sm">
+                                <i class="bi bi-arrow-left-right"></i>
+                            </a>
+                        }
+
+                        @* Sửa – xóa vẫn giữ *@
+                        @if (isOwner)
+                        {
+                            <a href="/CauThu/Edit?maCT=@row[0]" class="btn btn-primary btn-sm">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <a href="/CauThu/Delete?maCT=@row[0]" class="btn btn-danger btn-sm"
+                               onclick="return confirm('Xóa cầu thủ @row[1]?')">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        }
+
+                        <a href="/CauThu/Details2?maCT=@row[0]" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

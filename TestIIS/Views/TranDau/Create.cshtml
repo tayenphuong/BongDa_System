@@ -1,0 +1,53 @@
+﻿@using TestIIS.Models
+@model TestIIS.Models.DoiBong
+@{
+    ViewBag.Title = "Tạo trận đấu";
+    List<DoiBong> list = ViewBag.ListDB as List<DoiBong>;
+}
+
+<h2>Tạo trận đấu</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Mã trận đấu</label>
+        <input type="text" name="MaTD" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Đội bóng 1</label>
+        <select name="MaDB1" class="form-control">
+            @foreach (var d in list)
+            {
+                <option value="@d.MaDB">@d.TenDB</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Đội bóng 2</label>
+        <select name="MaDB2" class="form-control">
+            @foreach (var d in list)
+            {
+                <option value="@d.MaDB">@d.TenDB</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Trọng tài</label>
+        <input type="text" name="TrongTai" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Sân đấu</label>
+        <input type="text" name="SanDau" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary mt-3">Tạo trận</button>
+</form>

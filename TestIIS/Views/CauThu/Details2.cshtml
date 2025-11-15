@@ -1,0 +1,63 @@
+﻿@model TestIIS.Models.CauThuDetailViewModel
+@{
+    ViewBag.Title = "Details2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-primary">Thông tin cầu thủ</h2>
+
+    <div class="card shadow p-4 mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Mã cầu thủ:</strong> @Model.MaCT</p>
+                <p><strong>Họ tên:</strong> @Model.HoTen</p>
+                <p><strong>Mã đội bóng:</strong> @Model.MaDB</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Số trận đã tham gia:</strong> @Model.SoTranDaThamGia</p>
+                <p><strong>Tổng bàn thắng:</strong> @Model.TongBanThang</p>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mb-3 text-secondary">Danh sách trận đấu đã tham gia</h4>
+
+    @if (Model.TranThamGia != null && Model.TranThamGia.Any())
+    {
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Mã trận đấu</th>
+                    <th>Sân đấu</th>
+                    <th>Trọng tài</th>
+                    <th>Đội 1</th>
+                    <th>Đội 2</th>
+                    <th>Số trái ghi được</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tran in Model.TranThamGia)
+                {
+                    <tr>
+                        <td>@tran.MaTD</td>
+                        <td>@tran.SanDau</td>
+                        <td>@tran.TrongTai</td>
+                        <td>@tran.MaDB1</td>
+                        <td>@tran.MaDB2</td>
+                        <td>@tran.SoTrai</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-warning">Cầu thủ này chưa tham gia trận đấu nào.</div>
+    }
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index", "CauThu")" class="btn btn-secondary">← Quay lại danh sách</a>
+    </div>
+</div>
+

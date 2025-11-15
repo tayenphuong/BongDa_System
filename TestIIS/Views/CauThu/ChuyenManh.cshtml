@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Chuyển mảnh cầu thủ";
+}
+
+<div class="container mt-4">
+    <h3 class="text-primary">Chuyển mảnh cầu thủ</h3>
+    <hr />
+
+    <form action="@Url.Action("ChuyenManhConfirm")" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label>Mã cầu thủ:</label>
+            <input type="text" name="maCT" class="form-control" value="@ViewBag.MaCT" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Họ tên:</label>
+            <input type="text" class="form-control" value="@ViewBag.HoTen" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Đội hiện tại:</label>
+            <input type="text" class="form-control" value="@ViewBag.MaDB" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Chọn đội bóng ở mảnh 2:</label>
+            @Html.DropDownList("maDBMoi", (SelectList)ViewBag.DoiBongList, "-- Chọn đội bóng đích --", new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-success">Xác nhận chuyển</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

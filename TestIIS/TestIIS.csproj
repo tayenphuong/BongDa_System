@@ -48,7 +48,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,16 +123,44 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\chitietController.cs" />
-    <Compile Include="Controllers\hoadonController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\khachhangController.cs" />
-    <Compile Include="Controllers\khohangController.cs" />
-    <Compile Include="Controllers\sanphamController.cs" />
+    <Compile Include="Controllers\BongDaController.cs" />
+    <Compile Include="Controllers\CauThuController.cs" />
+    <Compile Include="Controllers\DoiBongController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TranDauController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BongDa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BongDa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BongDa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BongDa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BongDa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BongDa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CauThu.cs">
+      <DependentUpon>BongDa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CauThuDetailViewModel.cs" />
+    <Compile Include="Models\ChuyenCauThuViewModel.cs" />
     <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\DoiBong.cs">
+      <DependentUpon>BongDa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThamGia.cs">
+      <DependentUpon>BongDa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TranDau.cs">
+      <DependentUpon>BongDa.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,12 +183,29 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\BongDa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BongDa.Context.cs</LastGenOutput>
+      <DependentUpon>BongDa.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\BongDa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BongDa.edmx</DependentUpon>
+      <LastGenOutput>BongDa.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BongDa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BongDa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BongDa.edmx.diagram">
+      <DependentUpon>BongDa.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -180,18 +228,31 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\chitiet\Index.cshtml" />
-    <Content Include="Views\hoadon\Index.cshtml" />
-    <Content Include="Views\khachhang\Index.cshtml" />
-    <Content Include="Views\khohang\Index.cshtml" />
-    <Content Include="Views\sanpham\Index.cshtml" />
-    <Content Include="Views\sanpham\Cau2_1.cshtml" />
-    <Content Include="Views\sanpham\Cau2_2.cshtml" />
-    <Content Include="Views\sanpham\Cau2_3.cshtml" />
+    <Content Include="Views\BongDa\Cau1.cshtml" />
+    <Content Include="Views\BongDa\Cau2.cshtml" />
+    <Content Include="Views\BongDa\Cau3.cshtml" />
+    <Content Include="Views\BongDa\Cau4.cshtml" />
+    <Content Include="Views\BongDa\Cau5.cshtml" />
+    <Content Include="Views\BongDa\Cau10.cshtml" />
+    <Content Include="Views\BongDa\Cau9.cshtml" />
+    <Content Include="Views\BongDa\Cau8.cshtml" />
+    <Content Include="Views\BongDa\Cau7.cshtml" />
+    <Content Include="Views\BongDa\Cau6.cshtml" />
+    <Content Include="Views\CauThu\Index.cshtml" />
+    <Content Include="Views\CauThu\DeleteCauThu.cshtml" />
+    <Content Include="Views\CauThu\Create.cshtml" />
+    <Content Include="Views\CauThu\Edit.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\DoiBong\Index.cshtml" />
+    <Content Include="Views\DoiBong\Create.cshtml" />
+    <Content Include="Views\DoiBong\Edit.cshtml" />
+    <Content Include="Views\CauThu\ChuyenManh.cshtml" />
+    <Content Include="Views\CauThu\Details2.cshtml" />
+    <Content Include="Views\CauThu\ChuyenCauThu.cshtml" />
+    <Content Include="Views\TranDau\Create.cshtml" />
+    <Content Include="Views\TranDau\Index.cshtml" />
+    <Content Include="Views\TranDau\Details.cshtml" />
+    <Content Include="Views\TranDau\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -222,6 +283,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

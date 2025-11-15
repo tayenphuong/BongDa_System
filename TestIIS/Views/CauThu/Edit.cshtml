@@ -1,0 +1,18 @@
+﻿<h2>Sửa cầu thủ</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Mã cầu thủ</label>
+        <input type="text" name="maCT" class="form-control" value="@ViewBag.MaCT" readonly />
+    </div>
+    <div class="form-group">
+        <label>Họ tên</label>
+        <input type="text" name="hoTen" class="form-control" value="@ViewBag.HoTen" required />
+    </div>
+    <div class="form-group">
+        <label>Mã đội bóng</label>
+        <input type="text" name="maDB" class="form-control" value="@ViewBag.MaDB" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Quay lại</a>
+</form>

@@ -1,0 +1,35 @@
+﻿@model TestIIS.Models.ChuyenCauThuViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Chuyển Cầu Thủ Sang Mảnh Khác";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger">@ViewBag.Message</div>
+}
+
+@using (Html.BeginForm("ChuyenCauThu", "CauThu", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.MaCT)
+
+    <div class="form-group">
+        <label>Mã Cầu Thủ:</label>
+        <span class="form-control">@Model.MaCT</span>
+    </div>
+
+    <div class="form-group">
+        <label>Chọn Đội Bóng Mới (ở mảnh LINK):</label>
+        @Html.DropDownList("maDBMoi", Model.DoiBongMoiList, "-- Chọn đội bóng --", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Chuyển Cầu Thủ</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary mt-3">Quay lại</a>
+}

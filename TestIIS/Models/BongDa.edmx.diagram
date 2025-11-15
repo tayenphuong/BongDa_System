@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec5408e542604ca99e1226d8f38011d5" Name="Diagram1">
+        <EntityTypeShape EntityType="BongDaModel.CauThu" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BongDaModel.DoiBong" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BongDaModel.ThamGia" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BongDaModel.TranDau" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="BongDaModel.FK__CauThu__MaDB__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="BongDaModel.FK__ThamGia__MaCT__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BongDaModel.FK__TranDau__MaDB1__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="BongDaModel.FK__TranDau__MaDB2__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BongDaModel.FK__ThamGia__MaTD__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
