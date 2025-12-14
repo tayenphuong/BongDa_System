@@ -1,0 +1,49 @@
+﻿@using TestIIS.Models
+@model DoiBongDetailsViewModel
+@{
+    ViewBag.Title = "Chi tiết đội bóng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-3">⚽ Thông tin đội bóng</h2>
+
+<div class="card p-3 mb-4 shadow-sm">
+    <h4><b>@Model.TenDB</b> (@Model.MaDB)</h4>
+    <p><b>CLB:</b> @Model.CLB</p>
+</div>
+
+<h3 class="mt-4">📊 Thống kê tổng quát</h3>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card text-center p-3 shadow-sm">
+            <h4>👥 Cầu thủ</h4>
+            <h2 class="text-primary">@Model.SoCauThu</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center p-3 shadow-sm">
+            <h4>📅 Trận đã đá</h4>
+            <h2 class="text-success">@Model.SoTranDaDa</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center p-3 shadow-sm">
+            <h4>🥅 Tổng bàn thắng</h4>
+            <h2 class="text-danger">@Model.TongBanThang</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center p-3 shadow-sm">
+            <h4>🏆 Vua phá lưới</h4>
+            <p class="mb-0"><b>@Model.VuaPhaLuoi</b></p>
+            <h5 class="text-warning">@Model.BanThangCaoNhat bàn</h5>
+        </div>
+    </div>
+
+</div>
+

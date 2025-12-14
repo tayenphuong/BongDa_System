@@ -1,0 +1,69 @@
+﻿@model TestIIS.Models.DoiBong
+@{
+    ViewBag.Title = "Thêm đội bóng";
+
+    // Lấy server đang chọn
+    string selectedServer = Session["SelectedServer"] as string ?? "SV1";
+
+    // Mặc định CLB theo mảnh
+    string defaultCLB = "CLB1";
+
+    if (selectedServer == "SV2")
+    {
+        defaultCLB = "CLB1";   // Mảnh con SV2 -> CLB1
+    }
+    else if (selectedServer == "SV3")
+    {
+        defaultCLB = "CLB2";   // Mảnh con SV3 -> CLB2
+    }
+}
+<h2 class="mb-4">@ViewBag.Title</h2>
+
+<div class="container">
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "card p-4 shadow-sm", style = "max-width: 600px;" }))
+    {
+        <div class="form-group mb-3">
+            <label class="font-weight-bold">Mã đội bóng:</label>
+            @Html.TextBoxFor(m => m.MaDB, new { @class = "form-control", placeholder = "Nhập mã đội bóng" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold">Tên đội bóng:</label>
+            @Html.TextBoxFor(m => m.TenDB, new { @class = "form-control", placeholder = "Nhập tên đội bóng" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold">CLB:</label>
+
+            @if (selectedServer == "SV1")
+            {
+                <!-- SV1 thì cho chọn -->
+                @Html.DropDownListFor(
+                    m => m.CLB,
+                    new SelectList(new[]
+                    {
+                        new { Value = "CLB1", Text = "CLB1" },
+                        new { Value = "CLB2", Text = "CLB2" }
+                    }, "Value", "Text"),
+                    "Chọn CLB",
+                    new { @class = "form-control" }
+                )
+            }
+            else
+            {
+                <!-- SV2 hoặc SV3 thì cố định -->
+                @Html.DropDownListFor(
+                    m => m.CLB,
+                    new SelectList(new[]
+                    {
+                        new { Value = defaultCLB, Text = defaultCLB }
+                    }, "Value", "Text", defaultCLB),
+                    new { @class = "form-control", @readonly = "readonly" }
+                )
+            }
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Thêm mới</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary mt-3">Quay lại</a>
+    }
+</div>

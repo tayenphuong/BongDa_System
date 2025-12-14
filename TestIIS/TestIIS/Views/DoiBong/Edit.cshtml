@@ -1,0 +1,27 @@
+﻿@model TestIIS.Models.DoiBong
+@{
+    ViewBag.Title = "Cập nhật đội bóng";
+}
+
+<h2 class="mb-4">@ViewBag.Title</h2>
+
+<div class="container">
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "card p-4 shadow-sm", style = "max-width: 600px;" }))
+    {
+        @Html.HiddenFor(m => m.MaDB)
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold">Tên đội bóng:</label>
+            @Html.TextBoxFor(m => m.TenDB, new { @class = "form-control", placeholder = "Nhập tên đội bóng" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold">CLB:</label>
+            @Html.TextBoxFor(m => m.CLB, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        
+
+        <button type="submit" class="btn btn-success mt-3">Lưu thay đổi</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary mt-3">Quay lại</a>
+    }
+</div>
